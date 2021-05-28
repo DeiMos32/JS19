@@ -1,13 +1,12 @@
-let money = 15000,
-    income = 'freelance',
-    addExpenses = 'Internet, Taxi, Communal Apartment',
-    deposit = true,
-    mission = 100000,
-    period = 12;
+    let money = 15000,
+        income = 'freelance',
+        addExpenses = 'Internet, Taxi, Communal Apartment',
+        deposit = true,
+        mission = 100000,
+        period = 12;
 
-    console.log(typeof money);
-    console.log(typeof inCome);
-    console.log(typeof deposit);
+
+    console.log(typeof money, typeof inCome, typeof deposit);
     console.log(addExpenses.length);
     console.log('Период равен ' + period + ' месяцам');
     console.log('Цель заработать ' + mission + ' рублей');
