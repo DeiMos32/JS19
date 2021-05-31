@@ -24,12 +24,15 @@ switch (lang) {
         break;
 }
 
+
 let week = [
-     [weekEn],
-     [weekRu]
+     ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+     ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 ];
 
-console.log((namePerson === 'Артем') ? 'директор' : namePerson === 'Максим' ? 'преподователь' : 'ученик');
+let weekArray = lang === 'ru' ? console.log(week[0]) : console.log(week[1]);
+
+console.log((namePerson === 'Артем') ? 'Директор' : namePerson === 'Максим' ? 'Преподователь' : 'ученик');
 
 
 
