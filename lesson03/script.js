@@ -30,7 +30,7 @@ let week = [
      ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 ];
 
-let weekArray = lang === 'ru' ? console.log(week[0]) : console.log(week[1]);
+ lang === 'ru' ? console.log(week[0]) : console.log(week[1]);
 
 console.log((namePerson === 'Артем') ? 'Директор' : namePerson === 'Максим' ? 'Преподователь' : 'ученик');
 
