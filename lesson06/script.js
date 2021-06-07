@@ -1,5 +1,10 @@
 'use strict';
 
+function isNumber (n){
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+
 function randomNumber() {
     let random = Math.floor(Math.random() * (100 - 0) + 0);
     let begin = confirm('Угадай число от 1 до 100');
@@ -16,7 +21,7 @@ function randomNumber() {
             return alert('Игра окончена');
         }
 
-        if (inputNumber === '' || isNaN(inputNumber)) {
+        if (!isNumber(inputNumber)) {
             alert('Введите число');
             return guessNumber();
         }
