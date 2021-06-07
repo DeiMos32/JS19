@@ -1,33 +1,40 @@
 'use strict';
 
-let arr = [];
+function randomNumber() {
+    let random = Math.floor(Math.random() * (100 - 0) + 0);
+    let begin = confirm('Угадай число от 1 до 100');
 
-
-for ( let i = 0; i < 7; i++) {
-    arr[i] = prompt('Введите число');
-}
-
-for ( let i = 0; i < 7; i++) {
-    if (arr[i].slice(0, 1) === '2' || arr[i].slice(0, 1) === '4'){
-       console.log(arr[i]); 
+    if (begin === false) {
+        return alert('Игра окончена');
     }
-}
+    
 
-function isPrime (n) {
-    if (n === 1 || n === 0) {
-        return false;
-    } else {
-        for(let i = 2; i < n; i++) {
-            if(n % i === 0) {
-                return false;
-            }
+    function guessNumber() {
+        let inputNumber = prompt('Введите число от 1 до 100');
+        
+        if (inputNumber === null) {
+            return alert('Игра окончена');
         }
-        return true;  
-    }
-}
 
-for (let i = 0; i < 100; i++){
-    if (isPrime(i) === true){
-        console.log(i + ' Делители этого числа: ' + ' 1 и ' + i);
+        if (inputNumber === '' || isNaN(inputNumber)) {
+            alert('Введите число');
+            return guessNumber();
+        }
+        
+        if (inputNumber > random) {
+            alert('Загаданное число меньше');
+            return guessNumber();
+        }
+
+        if (inputNumber < random) {
+            alert('Загаданное число больше');
+            return guessNumber();
+        }
+
+        if (+inputNumber === random) {
+           return alert('Поздравляю, вы победили!');
+        }
     }
+    guessNumber(random);
 }
+randomNumber();
