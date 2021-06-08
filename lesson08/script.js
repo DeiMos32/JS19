@@ -66,7 +66,6 @@ let money;
                 appData.addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
                 appData.addExpenses = appData.addExpenses.split(',');
                 appData.addExpenses = appData.addExpenses.map(item => item.trim());
-                console.log(appData.addExpenses);
                 appData.deposit = confirm('Есть ли у вас депозит в банке');
                 
                 for (let i = 0; i < 2;i++) {
